@@ -1,0 +1,145 @@
+.top {
+  width: 100%;
+  height: 120rpx;
+  background-color: #048176;
+  color: white;
+  line-height: 120rpx;
+  text-align: center;
+}
+
+.tab {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 10rpx 0;
+  font-size: 36rpx;
+  color: rgb(184, 184, 184);
+  margin: 0 50rpx;
+  height: 30px;
+  line-height: 30px;
+}
+
+.topTabSwiper {
+  border-bottom: 1px solid #ccc;
+  zoom: 1;
+  background-color: white;
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer {
+  border-bottom: 5rpx solid #048176;
+}
+
+.swiper {
+  width: 100%;
+  margin-bottom: 100rpx;
+}
+.reportBtn{
+  font-size: 28rpx;
+  padding: 2rpx 6rpx;
+  height: 46rpx;
+  line-height: 34rpx;
+  border: 1px solid #FF5500;
+  color: #FF5500;
+  background-color: white;
+  float: right;
+  margin-right: 24rpx;
+}
+/* 订单盒子 */
+/* .wiperItem{
+  height: 100%;
+  margin-bottom: 80rpx;
+} */
+.scrollView{
+  height: 100%;
+  background-color: white;
+}
+.topLine{
+  background-color: #F6F6F6;
+  padding: 8rpx 0;
+}
+.Order-box {
+  width: 100%;
+  height: 100%;
+}
+/* ============================= */
+.Order {
+  width: 92%;
+  padding: 20rpx 0;
+  border-bottom: 4rpx solid #f6f6f6;
+  margin-left: 8%;
+  display: flex;
+
+}
+.statusLabel{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.statusText{
+  font-size: 28rpx;
+  color: #048176;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.flog{
+  color: #F0BA00;
+  font-size: 26rpx;
+  display: inline-block;
+  margin-left:10rpx;
+}
+.order-img {
+  width: 120rpx;
+  height: 117rpx;
+  background-image: url('https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/ccc%2Fjianzhi%2F%E5%8D%95%E5%AD%90%E8%BD%A6.png');
+  background-size: 100%;
+  flex: 0 0 120rpx;
+}
+.order-text{
+  flex: auto;
+  margin-left: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+.line1{
+  color: #646464;
+  font-size: 32rpx;
+  flex: 1;
+}
+.line2{
+  color: #8A8A8A;
+  font-size: 26rpx;
+  flex: 1;
+}
+.line3{
+  color: #c7c7c7;
+  font-size: 26rpx;
+  flex: 1;
+}
+.line3Box{
+  display: flex;
+}
+.line3text{
+  flex: 1;
+}
+.line3BtnBox{
+  flex: 1;
+}
+.line3Btn{
+  float: right;
+  /* height: 50rpx; */
+  /* line-height: 50rpx; */
+  font-size: 30rpx;
+  padding: 0;
+  /* border:1rpx solid #048176; */
+  color: #048176;
+  /* border-radius: 8rpx; */
+  margin-right: 60rpx;
+}
+/* ============================= */

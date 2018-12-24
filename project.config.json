@@ -1,0 +1,95 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wxdf0d5f8b2a3b5ab3",
+	"projectname": "%E5%85%BC%E8%81%8C%E5%B9%B3%E5%8F%B0",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "兼职平台",
+					"pathName": "pages/index/index"
+				},
+				{
+					"id": -1,
+					"name": "广告详情",
+					"pathName": "pages/detail/detail"
+				},
+				{
+					"id": -1,
+					"name": "订单中心",
+					"pathName": "pages/index-Order/index-Order"
+				},
+				{
+					"id": -1,
+					"name": "单子详情",
+					"pathName": "pages/taskDetail/taskDetail"
+				},
+				{
+					"id": -1,
+					"name": "找师傅",
+					"pathName": "pages/findWorker/findWorker"
+				},
+				{
+					"id": -1,
+					"name": "师傅入住",
+					"pathName": "pages/workerIn/workerIn"
+				},
+				{
+					"id": -1,
+					"name": "个人资料",
+					"pathName": "pages/personInfo/personInfo"
+				},
+				{
+					"id": -1,
+					"name": "问题反馈",
+					"pathName": "pages/myQuestionBack/myQuestionBack"
+				},
+				{
+					"id": -1,
+					"name": "常见问题",
+					"pathName": "pages/question/question"
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login"
+				}
+			]
+		}
+	}
+}

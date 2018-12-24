@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/detail/detail",
+    "pages/index-Order/index-Order",
+    "pages/taskDetail/taskDetail",
+    "pages/findWorker/findWorker",
+    "pages/workerIn/workerIn",
+    "pages/personInfo/personInfo",
+    "pages/myQuestionBack/myQuestionBack",
+    "pages/question/question",
+    "pages/public/buttom"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "兼职平台",
+    "navigationBarTextStyle": "black"
+  }
+}

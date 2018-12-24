@@ -1,0 +1,212 @@
+/* .wrapper{
+  background-color: #F6F6F6;
+  padding-top: 20rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+} */
+.contentBox{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  display: flex;
+}
+.contentBox2{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  display: block;
+  margin-top: 18rpx;
+}
+.leftImg{
+  flex: 0 0 180rpx;
+}
+.img{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #11877C;
+  border-radius: 100%;
+  background-image: url('https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/ccc%2Fjianzhi%2F%E5%8D%95%E5%AD%90%E8%BD%A6.png');
+  background-size: 100%;
+}
+.rightText{
+  flex: 0 0 70%;
+  height: 100%;
+}
+.line1{
+  margin-top: 14rpx;
+}
+.taskTitle{
+  font-size: 38rpx;
+}
+.line1text{
+  font-size: 34rpx;
+}
+.line2text{
+  font-size: 34rpx;
+}
+.lineCenter{
+  flex: 20rpx;
+}
+.line2{
+  font-size: 28rpx;
+}
+.line3{
+  font-size: 28rpx;
+  color: #048176;
+}
+.flog{
+  color: #F0BA00;
+  font-size: 28rpx;
+  margin-left:10rpx;
+}
+.line2Text{
+  background-color: #DFEFED;
+  padding: 4rpx 18rpx;
+  margin-right: 8rpx;
+  border-radius: 4rpx;
+  flex: 1;
+}
+.line3BtnBox{
+  flex: 1;
+}
+.line3Btn{
+  float: right;
+  font-size: 34rpx;
+  padding: 0;
+  color: #048176;
+  margin-right: 60rpx;
+}
+/* ========================= */
+
+.contentBox2{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  display: block;
+  margin-top: 18rpx;
+}
+.title2{
+  display: block;
+  color: #646464;
+  font-size: 40rpx;
+  margin-left: 10rpx;
+}
+/* 列表详情 */
+.li {
+  background-color: #fff;
+  display: flex;
+  font-size: 34rpx;
+  width: 98%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.litext{
+  color: #929292;
+  flex: 0 0 180rpx;
+  margin-left: 10rpx;
+  font-size: 34rpx;
+}
+.value{
+  color: #929292;
+  flex: 1;
+  font-size: 34rpx;
+}
+
+.liContent{
+  font-size: 34rpx;
+  color: #919191;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+  padding-top: 10rpx;
+}
+
+.li .icon-xiala ,.icon-shangjiantou {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.gray {
+  color: #8e8e8e;
+}
+
+.red {
+  color: #fe2e2e;
+}
+
+/* =================================== */
+.contentBox3{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  display: block;
+  margin-top: 18rpx;
+}
+.itemtop{
+  display: flex;
+  padding: 30rpx 0 20rpx 0;
+  align-items: center;
+}
+.pic{
+  flex: 0 0 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  background-color: #048176;
+}
+.name{
+  flex: 1;
+  margin-left: 24rpx;
+  color: #323232;
+}
+.itembottom{
+  word-break:break-all;
+}
+
+.contentBox4{
+  padding: 0rpx 40rpx;
+  background-color: white;
+  margin-top: 18rpx;
+  overflow: hidden;
+}
+.comments{
+  text-align: center;
+  color: #048176;
+  display: block;
+  margin: 20rpx 0;
+  overflow: hidden;
+}
+.comments:active{
+  color: #11877C;
+}
+/* =============== */
+.boxbox{
+  background-color: white;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  padding: 30rpx 40rpx;
+}
+.title3{
+  display: block;
+  color: #646464;
+  font-size: 40rpx;
+}
+.contentBox5{
+  display: flex;
+  margin-top: 30rpx;
+}
+.getTaskBtn{
+  background-color: #048176;
+  color: white;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-top: 20rpx;
+  width: 80%;
+  font-size: 36rpx;
+}
+.cancelTaskBtn{
+  background-color: #999;
+  color: white;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-top: 20rpx;
+  width: 80%;
+  font-size: 36rpx;
+}

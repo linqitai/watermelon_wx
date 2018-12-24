@@ -1,0 +1,114 @@
+<scroll-view class='wrapper2' scroll-y>
+  <view class='contentBox'>
+      <view class='leftImg'>
+        <image class='img' src='{{master.user.avatarUrl}}'></image>
+      </view>
+      <view class='rightText'>
+        <view class=''>
+          <label class="taskTitle">{{title}}</label>
+        </view>
+        <view class='lineCenter'></view>
+        <view class='line2' style='margin-top:6rpx;'>
+          <label class="line2text" style='line-height:64rpx' bindlongtap='copyText' data-text='{{phone}}'  hover-class="weui-cell_active" data-reply-phone="{{phone}}" bindtap="phoneCall">{{phone}}</label>
+        </view>
+        <view class='line3'>
+          <label class="line2text">
+            {{is_done}}
+          </label>
+          <label class='flog'>
+            {{user_cancel_apply==1?'任务主提出取消单子申请':''}}
+            {{master_cancel_apply==1?'师傅提出取消接单申请':''}}
+          </label>
+        </view>
+      </view>
+  </view>
+  <view class='contentBox2'>
+    <view class='title2'>详情信息</view>
+    <!-- <view class="li" data-index="0">
+      <view class="litext">电话：</view>
+      <view class="value">电话</view>
+    </view> -->
+    <view class="li" data-index="1">
+      <view class="litext">订单号：</view>
+      <view class="value" bindtap='setOrderNo' bindlongtap='setOrderNo'>{{order_no}}</view>
+    </view>
+    <view class="li" data-index="1">
+      <view class="litext">工种：</view>
+      <view class="value">{{gz}}</view>
+    </view>
+    <view class="li" data-index="1" wx:if="{{remark}}">
+      <view class="litext">工种补充：</view>
+      <view class="value">{{remark}}</view>
+    </view>
+    <view class="li" data-index="2">
+      <view class="litext">地址：</view>
+      <view class="value">{{address}}</view>
+    </view>
+    <view class="li" data-index="3">
+      <view class="litext">预约时间：</view>
+      <view class="value">{{appointment_time}}</view>
+    </view>
+    <view class="li" data-index="4">
+      <view class="litext">详情描述：</view>
+      <view class="value">{{content}}</view>
+    </view>
+  </view>
+  <view class='contentBox3' wx:if="{{comment!=null}}">
+    <view class='title2'>评论</view>
+    <view class="itemBox">
+      <view class="itemtop">
+        <image class='pic' src='{{comment.master_avatarUrl}}'></image>
+        <label class='name'>{{comment.master_nickName}}</label>
+      </view>
+      <view class="itembottom">
+        {{comment.comment}}
+      </view>
+    </view>
+  </view>
+  <view class='contentBox4' wx:if="{{comment==null&&isShowCommentBtn==true}}">
+    <view class='comments' bindtap='addComment'>添加评论</view>
+  </view>
+  <view class='boxbox' wx:if="{{is_done!='待接单'&&master!=null}}">
+    <view class='title3'>抢单客户信息</view>
+    <view class='contentBox5'>
+      <view class='leftImg'>
+        <image class='img' src='{{master.user.avatarUrl}}'></image>
+      </view>
+      <view class='rightText'>
+        <view class='line1'>
+          <label class="line1text">{{master.user.nickName}}</label>
+        </view>
+        <view class='lineCenter'></view>
+        <view class='line2'>
+          <label class="line1text line2text" style='line-height:64rpx' bindlongtap='copyText' data-text='{{phone}}'  hover-class="weui-cell_active" data-reply-phone="{{phone}}" bindtap="phoneCall">{{master.phone}}</label>
+          <!-- <label class="line1text line2text">{{master.phone}}</label> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <form bindsubmit="getTask" report-submit='true'>
+    <button class='getTaskBtn' type="primary" wx:if="{{isAcceptBtnShow}}" form-type="submit">抢单</button>
+  </form>
+  <!-- <button class='getTaskBtn' bindtap='getTask' wx:if="{{is_done=='待接单'}}">抢单</button> -->
+  <button class='cancelTaskBtn' type="primary" bindtap='cancelTask' wx:if="{{isShowIs_done0SoldOutBtn}}">取消任务</button>
+  <!-- <button class='cancelTaskBtn' bindtap='soldOutTask' wx:if="{{isShowSoldOutBtn}}">下架任务</button> -->
+  <view wx:if="{{isShowMasterCancalBtn}}">
+    <button class='cancelTaskBtn' type="primary" bindtap='completeTask'>完成任务</button>
+    <button class='cancelTaskBtn' type="default" bindtap='masterCancelTask'>取消单子</button>
+  </view>
+  <button class='cancelTaskBtn' type="primary" bindtap='userCancelTask' wx:if="{{isShowUserCancalBtn}}">取消单子</button>
+  <button class='cancelTaskBtn' type="primary" bindtap='agreeMasterCancalTask' wx:if="{{isShowAgreeMasterCancalBtn}}">同意师傅取消单子</button>
+  <button class='cancelTaskBtn' type="primary" bindtap='agreeUserCancalTask' wx:if="{{isShowAgreeUserCancalBtn}}">同意任务主取消单子</button>
+  <view class='lineGray'></view>
+  <view class="free-dialog {{ showDialog ? 'free-dialog--show' : '' }}">
+    <view class="free-dialog__mask" bindtap="toggleDialog" />
+    <view class="free-dialog__container">
+      <view style="padding: 5% 5% 5% 5%">
+        <form bindsubmit="bindFormSubmit" report-submit='true'>
+          <textarea style='width:100%;height:800rpx;' placeholder="写评论..." name="textarea" bindinput='getComment' maxlength="50"/>
+          <button type="primary" form-type="submit"> 提交 </button>
+        </form>
+      </view>
+    </view>
+  </view>
+</scroll-view>

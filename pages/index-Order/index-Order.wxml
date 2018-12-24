@@ -1,0 +1,127 @@
+<!-- <view class='top '>
+  <text>订单中心</text>
+</view> -->
+<view class='topTabSwiper'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>我下的单</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>抢单中心</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>我抢的单</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:100%;" duration="300" bindchange="bindSwiperchange">
+  <!-- 下的单 -->
+  <swiper-item class="wiperItem">
+    <scroll-view class='scrollView' scroll-y lower-threshold="50" bindscrolltolower="scrollToBottom1" bindscroll="scroll">
+      <view class='Order-box'>
+        <view class='topLine'></view>
+        <!-- 单子 -->
+        <view class='Order' wx:for="{{list1}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-tab='0' data-avatar='{{item.master_avatarUrl}}' bindtap='toDetail'>
+          <image class='order-img' src="{{item.master_avatarUrl}}" lazy-load="true"></image>
+          <view class='order-text'>
+            <view class='line1'>标题：{{item.title}}</view>
+            <view class='line2'>
+              预约时间：{{item.appointment_time}}
+            </view>
+            <view class='line3'>
+              <view class='line3Box'>
+                <label class='line2'>地址：{{item.address}}</label>
+              </view>
+            </view>
+            <view class='line3'>
+              <view class='line3Box'>
+                <label class='line2'>
+                  <label class='statusText'>状态：{{item.is_done==1?'已完成':item.is_done==2?'进行中':'待接单'}}</label>
+                  <label class='flog'>
+                    {{item.user_cancel_apply==1?'任务主提出取消单子申请':''}}
+                    {{item.master_cancel_apply==1?'师傅提出取消接单申请':''}}
+                  </label>
+                </label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 抢单中心 -->
+  <swiper-item>
+    <scroll-view class='scrollView' scroll-y lower-threshold="50" bindscrolltolower="scrollToBottom2">
+      <view class='Order-box'>
+        <view class='topLine'></view>
+        <!-- 单子 -->              
+        <view class='Order' wx:for="{{list2}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-tab='1' data-avatar='{{item.master_avatarUrl}}' bindtap='toDetail'>
+          <image class='order-img' src="{{item.master_avatarUrl}}" lazy-load="true"></image>
+          <view class='order-text'>
+            <view class='line1'>标题：{{item.title}}</view>
+            <view class='line2'>
+              预约时间：{{item.appointment_time}}
+            </view>
+            <view class='line3'>
+              <view class='line3Box'>
+                <label class='line2'>地址：{{item.address}}</label>
+              </view>
+            </view>
+            <view class='line3'>
+              <view class='line3Box'>
+                <label class='line2'>
+                  <label class='statusText'>状态：{{item.is_done==1?'已完成':item.is_done==2?'进行中':'待接单'}}</label>
+                  <label class='flog'>
+                    {{item.user_cancel_apply==1?'任务主提出取消单子申请':''}}
+                    {{item.master_cancel_apply==1?'师傅提出取消接单申请':''}}
+                  </label>
+                </label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 抢的单 -->
+  <swiper-item>
+    <scroll-view class='scrollView' scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+      <view class='Order-box' >
+        <view class='topLine'></view>
+          <!-- 单子 -->              
+          <view class='Order' wx:for="{{list3}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-tab='2' data-avatar='{{item.master_avatarUrl}}' bindtap='toDetail'>
+            <image class='order-img' src="{{item.master_avatarUrl}}" lazy-load="true"></image>
+            <view class='order-text'>
+              <view class='line1'>标题：{{item.title}}</view>
+              <view class='line2'>
+                预约时间：{{item.appointment_time}} <button class='reportBtn' data-id='{{item.id}}' catchtap='reportEvent'>汇报施工情况</button>
+              </view>
+              <view class='line3'>
+                <view class='line3Box'>
+                  <label class='line2'>地址：{{item.address}}</label>
+                </view>
+              </view>
+              <view class='line3'>
+                <view class='line3Box'>
+                  <label class='line2'>
+                    <label class='statusText'>状态：{{item.is_done==1?'已完成':item.is_done==2?'进行中':'待接单'}}</label>
+                    <label class='flog'>
+                      {{item.user_cancel_apply==1?'任务主提出取消单子申请':''}}
+                      {{item.master_cancel_apply==1?'师傅提出取消接单申请':''}}
+                    </label>
+                  </label>
+                </view>
+              </view>
+            </view>
+          </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+<view class="free-dialog {{ showDialog ? 'free-dialog--show' : '' }}">
+  <view class="free-dialog__mask" bindtap="toggleDialog" />
+  <view class="free-dialog__container">
+    <view style="padding: 5% 5% 5% 5%">
+      <form bindsubmit="bindFormSubmit" report-submit='true'>
+        <textarea style='width:100%;height:800rpx;' placeholder="施工情况..." name="textarea" bindinput='getContent' maxlength="50"/>
+        <button type="primary" form-type="submit"> 提交 </button>
+      </form>
+    </view>
+  </view>
+</view>
+<nav currentMenu="{{currentMenu}}"></nav>
+
+<!-- <import src="../public/buttom.wxml" />
+<template is="foot" /> -->

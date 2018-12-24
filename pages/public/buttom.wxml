@@ -1,0 +1,46 @@
+<template name="foot">
+  <view class="bottom-box">
+    <navigator class='but' catchtap='changeColor' data-index="0" url='../index/index'>
+      <view class='but-icon'>
+        <text class="iconfont {{currentMenu[0]?'icon-arrow_right':'icon-shouye'}}"></text>
+      </view>
+      <view class='but-text'>
+        <text>首页</text>
+      </view>
+    </navigator>
+    <navigator class='but' catchtap='changeColor' data-index="1" url='../index-Order/index-Order'>
+      <view class='but-icon'>
+        <text class="iconfont {{currentMenu[1]?'icon-arrow_right':'icon-dingdan'}}"></text>
+      </view>
+      <view class='but-text'>
+        <text>订单中心</text>
+      </view>
+    </navigator>
+    <navigator class='but' catchtap='changeColor' data-index="2" url='../findWorker/findWorker'>
+      <view class='but-icon'>
+        <text class="iconfont {{currentMenu[2]?'icon-arrow_right':'icon-zhiyuanziliao'}}"></text>
+      </view>
+      <view class='but-text'>
+        <text>找师傅</text>
+      </view>
+    </navigator>
+    <navigator class='but' catchtap='changeColor' data-index="3" url='../workerIn/workerIn'>
+      <view class='but-icon'>
+        <text class="iconfont {{currentMenu[3]?'icon-arrow_right':'icon-renyuanleixing-gongsizhiyuan'}}"></text>
+      </view>
+      <view class='but-text'>
+        <text>师傅入驻</text>
+      </view>
+    </navigator>
+    <navigator class='but' catchtap='changeColor' data-index="4" url='../personInfo/personInfo'>
+      <view class='but-icon'>
+        <text class="iconfont {{currentMenu[4]?'icon-arrow_right':'icon-gerenziliao'}}"></text>
+      </view>
+      <view class='but-text'>
+        <text>个人资料</text>
+      </view>
+    </navigator>
+  </view>
+  <!-- 底部填充 -->
+  <view style='height:140rpx;'></view>
+</template>

@@ -1,0 +1,78 @@
+<view class='contentBox2'>
+  <view class='title2'>常见问题</view>
+  <view class="li" data-index="0" bindtap='changeToggle'>
+    <view class="left">西瓜帮你找平台收费规则？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[0]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[0]}}">
+   西瓜帮你找平台收费规则：注册用户可以使用西瓜帮你找平台，下单发布找师傅任务，并享受全程免费服务（但是为了确保平台发布任务真实性，需先向平台缴纳10元真实需求担保金，可随时申请退还）注：若有人发布虚假消息、违法信息、等不良信息，因对平台用户产生不良影响，平台将有权利没收真实需求保障金，严重将处以终身封号！举报者有现金红包奖励！
+  </view>
+  <view class="li" data-index="1" bindtap='changeToggle'>
+    <view class="left">为什么抢不了单？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[1]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[1]}}">
+    <view>1.你要符合平台基本要求，实名注册成功后的装修师傅才能正常抢单。</view>
+    <view>2.你注册成功后跨工种抢单需要联系客服接单。</view>
+  </view>
+  <view class="li" data-index="2" bindtap='changeToggle'>
+    <view class="left">接单需要购买保险吗?</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[2]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[2]}}">
+   接单施工过程中有风险，西瓜帮你找平台推荐购买保险，购买保险自由选择，购买保险过程中出现工伤则有保险公司赔偿，若没有购买保险，过程中出现工伤则由用户和用人自己承担，平台只提供信息咨询，不收取任何服务费用！
+  </view>
+  <view class="li" data-index="3" bindtap='changeToggle'>
+    <view class="left">️可以更改工种吗？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[3]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[3]}}">
+    不能
+  </view>
+  <view class="li" data-index="4" bindtap='changeToggle'>
+    <view class="left">可以跨工种接其他工种的订单吗？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[4]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[4]}}">
+    不能，如需要请联系客服
+  </view>
+  <view class="li" data-index="5" bindtap='changeToggle'>
+    <view class="left">️为什么使用不了小程序？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[5]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[5]}}">
+    检测一下您的微信是否是最新版本，如果是最新版本，删除小程序重新加载或联系客服
+  </view>
+  <view class="li" data-index="6" bindtap='changeToggle'>
+    <view class="left">发布任务为什么需要担保金？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[6]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[6]}}">
+    ️为避免不良用户发布虚假信息，黄色信息、违法违规信息对平台用户产生影响，缴纳保证金可随时申请退还到钱包，可随时申请提现到微信
+  </view>
+  <view class="li" data-index="7" bindtap='changeToggle'>
+    <view class="left">️加入平台怎么赚钱？</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[7]?'icon-jiantou8':'icon-arrow_right'}} iconClass"> </text>
+    </view>
+  </view>
+  <view class="liContent" hidden="{{!selectedFlag[7]}}">
+    ️平台采用国家法律规定允许的二级分销模式，凡是通过用户推广的二维码或者链接进入小程序，都自动默认成为你团队的一员，假如A推荐了B，B又推荐了C，那么A可以获取平台对B收益的30%，A也可以获取平台对C收益的20%，终身收益！平台也有更多功能开发中，要赚钱的的把平台推荐给其他人噢，感谢分享！
+  </view>
+</view>
+<!-- <import src="../public/buttom.wxml" />
+<template is="foot" /> -->

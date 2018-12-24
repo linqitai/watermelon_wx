@@ -1,0 +1,91 @@
+<scroll-view class='wrapper' scroll-y>
+  <view class='contentBox'>
+    <view class='inputBox'>
+      <label class='label'>标题</label><input class='input' placeholder="输入框" placeholder-class="inputP" bindinput='getTitle'/>
+    </view>
+    <view class='inputBox'>
+      <label class='label'>电话</label><input class='input' placeholder="输入框" placeholder-class="inputP" maxlength='11' bindinput='getPhone'/>
+    </view>
+    <view class='inputBox' bindtap='isShowWorkerTypeEvent'>
+      <label class='label'>选择工种</label>
+      <view class='select'>
+        <label class='inputP' wx:if="{{!index}}">选择工种</label>
+        <label wx:for='{{gz}}' wx:for-item="item" wx:for-index="index" wx:key="index"> {{item.name}}</label>
+        <text class="iconfont {{selectedFlag?'icon-jiantou8':'icon-arrow_right'}} iconArrow"> </text>
+      </view>
+    </view>
+    <!-- {{isblockSelect?'blockBorder':''}} -->
+    <view class='workerType' wx:if="{{isShowWorkerTypeBox}}">
+      <label wx:for='{{gzArr}}' wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" data-index='{{index}}' data-child="{{item.child}}" bindtap='blockTap' class="workerTypeBlock {{gzArr[index].checked==true?'blockBorder':''}} {{item.child.length>0?'addBorder':''}}">
+        {{item.name}}<text wx:if="{{item.child.length>0}}" class='iconfont icon-twoArrow'></text>
+      </label>
+    </view>
+    <view class='dialogSure' wx:if='{{selecMoreDialog}}'>
+      <label class='selecMoreHeader'>家具维修<label style='color:red' wx:if='{{showFlag}}'>(请选择以下工种)</label></label>
+      <view class='dialogBlockBox'>
+        <label wx:for='{{moreGz}}' wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" data-index='{{index}}' data-child="{{item.child}}" class="workerTypeBlock {{moreGz[index].checked==true?'blockBorder':''}}" bindtap='selectMoreBlockTap'>
+          {{item.name}}
+        </label>
+      </view>
+      <!-- <button type="default" hover-class="other-button-hover"> default </button> -->
+      <label class='selectMoreDialogSureBtn' bindtap='selectMoreDialogSureBtn'>确定</label>
+    </view>
+    <view class='inputBox'>
+        <label class='label'>预约时间</label>
+        <picker class='width100' wx:if='{{isShowDatePicker}}' mode="date" value="{{date}}" start="{{startDate}}" bindchange="bindDateChange">
+          <view class="picker">
+            <label class='inputP' wx:if="{{!date}}">选择年月日</label>
+            <label>{{date}}</label>
+            <text class="iconfont icon-arrow_right iconArrow right"></text>
+          </view>
+        </picker>
+        <picker class='width100' wx:if='{{isShowTimePicker}}' mode="time" value="{{time}}" bindchange="bindTimeChange">
+          <view class="picker">
+            <label class='inputP' wx:if="{{!time}}">选择时分</label>
+            <label>{{time}}</label>
+            <text class="iconfont icon-arrow_right iconArrow right"></text>
+          </view>
+        </picker>
+      <!-- <input class='input' placeholder="输入框" placeholder-class="inputP" bindinput='getTime'/> -->
+    </view>
+    <view class='inputBox'>
+      <label class='label'>地址</label>
+      <input class='input' placeholder="输入框" placeholder-class="inputP" bindinput='getAddress'/>
+    </view>
+    <view class='inputBoxTextarea'>
+      <label class='labelTextarea'>详情描述</label>
+      <input class='input' placeholder="输入框" placeholder-class="inputP" bindinput='detailInput'/>
+      <!-- <textarea class='inputTextarea' maxlength="200" auto-height placeholder="输入框" placeholder-class="inputP" bindinput="detailInput"/> -->
+    </view>
+  </view>
+  <view class='contentBox'>
+    <view class='inputBoxTextarea' bindtap='getInsurance'>
+      <view class='label2'>
+          <text class="iconfont icon-ziyuan {{has_insurance?'checkedIcon':'unCheckedIcon'}}"></text>
+      </view>
+      <label class='text2'>
+        选择为工人买施工保障金（自由选择），施工过程中出现工伤有平台保险公司承担
+      </label>
+    </view>
+  </view>
+  <view class='contentBox2'>
+    <button type="primary" bindtap="publish"> 发布 </button>
+  </view>
+  <view class='dialogSure' wx:if='{{dialogSureIsShow}}'>
+    <view class='dialogSureBox'>
+      <image class='dialogSureIcon' src='https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/ccc%2Fjianzhi%2F%E9%93%83%E9%93%9B.png'></image>
+      <label class='dialogTitle'>提示</label>
+      <label class='dialogText'>
+        为了方便的发布任务真实，请预支付与
+        真实需求保障金，发布任务24小时候可
+        随时申请退款（立即到账），接单后师
+        傅点击完工，客户立即收到退款。
+      </label>
+      <label class='dialogSureBtn' bindtap='dialogSureBtn'>确定</label>
+    </view>
+  </view>
+</scroll-view>
+<view class='mask' wx:if='{{maskIsShow}}' catchtouchmove="preventTouchMove" bindtap="maskHide"></view>
+<nav currentMenu="{{currentMenu}}"></nav>
+<!-- <import src="../public/buttom.wxml" />
+<template is="foot" /> -->

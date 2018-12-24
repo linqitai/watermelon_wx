@@ -1,0 +1,127 @@
+.contentBox{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  display: flex;
+  margin-top: 18rpx;
+}
+.contentBox2{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  display: block;
+  margin-top: 18rpx;
+}
+.leftImg{
+  flex: 0 0 30%;
+}
+.img{
+  width: 180rpx;
+  height: 180rpx;
+  background-color: #11877C;
+  border-radius: 100%;
+}
+.rightText{
+  flex: 0 0 70%;
+  height: 100%;
+  padding-left: 24rpx;
+}
+.line1{
+  margin-top: 36rpx;
+  /* background-color: #11877C; */
+  display: block;
+  width: 100%;
+}
+.line1text{
+  font-size: 36rpx;
+  min-width: 180rpx;
+}
+.line2text{
+  margin-left: 40rpx;
+  min-width: 180rpx;
+}
+.lineCenter{
+  flex: 20rpx;
+}
+.line2{
+  font-size: 24rpx;
+  color: #048176;
+  margin-top: 28rpx;
+  width: 100%;
+  /* background-color: #11877C; */
+}
+.line2Text{
+  background-color: #DFEFED;
+  padding: 4rpx 18rpx;
+  margin-right: 8rpx;
+  border-radius: 4rpx;
+}
+
+/* 列表详情 */
+
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 98%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+
+.left{
+  color: #676767;
+}
+
+.iconClass{
+  color: #929292;
+}
+
+.liContent{
+  font-size: 34rpx;
+  color: #919191;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+  padding-top: 10rpx;
+}
+
+.li .icon-xiala ,.icon-shangjiantou {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.gray {
+  color: #8e8e8e;
+}
+
+.red {
+  color: #fe2e2e;
+}
+
+.title2{
+  display: block;
+  font-size: 44rpx;
+}
+
+.questionBack{
+  background-color: white;
+  padding: 20rpx 40rpx;
+  overflow: hidden;
+  margin-top: 16rpx;
+}
+.loginAgian{
+  background-color: white;
+  padding: 20rpx 40rpx;
+  overflow: hidden;
+  margin-top: 16rpx;
+  margin-bottom: 80rpx;
+}
+.oneLine{
+  height: 46rpx;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+}
+.iconClass2{
+  color: #D1D1D1;
+  margin-right: 20rpx;
+}

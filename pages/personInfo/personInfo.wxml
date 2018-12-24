@@ -1,0 +1,100 @@
+<view class='contentBox'>
+    <view class='leftImg'>
+      <image class='img' src='{{avatarUrl}}'></image>
+    </view>
+    <view class='rightText'>
+      <view class='line1'>
+        <label class="line1text">{{nickName}}</label>
+        <label class="line1text">{{phone}}</label>
+      </view>
+      <view class='lineCenter'></view>
+      <view class='line2'>
+        <label class='line2Text' wx:if="{{category}}">{{category}}</label>
+        <label class='line2Text' wx:if="{{age}}">{{age}}年</label>
+        <!-- <label class='line2Text'>工信誉分 66</label> -->
+      </view>
+    </view>
+</view>
+<view class='contentBox2'>
+  <view class='title2'>资料信息</view>
+  <view class="li" bindtap='toWorkerIn'>
+    <view class="left">师傅入住</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='toQuestion'>
+    <view class="left">常见问题</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='toQuestionBack'>
+    <view class="left">问题反馈</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='buyInsurance'>
+    <view class="left">购买施工保险</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">商家合作</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">广告位合作</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">商城入驻</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">我的团队</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">我的钱包</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">城市加盟</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+  <view class="li" bindtap='merchantQuestion'>
+    <view class="left">我要推广</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
+</view>
+<!-- <view class="DescribeText">
+    <view>施工保证金（500元优先返单）</view>
+    <view>每次接单减少的信誉</view>
+</view> -->
+<view class="loginAgian" bindtap='loginAgian'>
+    <view class="left">刷新登录信息</view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+</view>
+<view class='oneLine'></view>
+<nav currentMenu="{{currentMenu}}"></nav>
+<!-- <import src="../public/buttom.wxml" />
+<template is="foot" /> -->

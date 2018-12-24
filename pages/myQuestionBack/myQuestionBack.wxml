@@ -1,0 +1,23 @@
+<scroll-view class='wrapper2' scroll-y>
+<view style='height:1rpx;'></view>
+<view class="feedback-title">
+  <text>问题和意见</text>
+</view>
+<textarea class="textarea" value="{{content}}" placeholder="请描述您所遇到问题和意见!" placeholder-class="placeholder" maxlength="{{maxlength}}" focus="{{focus}}" show-confirm-bar="{{showConfirmBar}}" bindinput='getContent'></textarea>
+
+<view class="feedback-title">
+  <text>添加图片(提供问题截图)</text>
+</view>
+
+<view class='text-box2'>
+  <text bindtap="upload" class='upload iconfont icon-jia' ></text>
+  
+  <image src="{{url}}" bindtap="listenerButtonPreviewImage" class='img'/>
+  <!-- <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+    <image src="{{item}}" bindtap="listenerButtonPreviewImage" data-index="{{index}}" class='img'/>
+  </block> -->
+  <view class='clear'></view>
+</view>
+
+<view class='Submission' bindtap='submit'>提交反馈</view>
+</scroll-view>

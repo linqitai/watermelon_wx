@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personInfo/personInfo",
+    "pages/index-Order/index-Order",
+    "pages/findWorker/findWorker",
+    "pages/workerIn/workerIn",
+    "pages/public/buttom"
+  ],
+  "tabBar": {
+    "color": "#989898",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#fcfbfb",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home .png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "买买",
+        "iconPath": "images/classify.png",
+        "selectedIconPath": "images/classify_selected.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "购物",
+        "iconPath": "images/shop.png",
+        "selectedIconPath": "images/shop_selected.png"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "text": "消息",
+        "iconPath": "images/new.png",
+        "selectedIconPath": "images/new_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "购物",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_selected.png"
+      }
+    ]
+  },
+  "debug": true
+}

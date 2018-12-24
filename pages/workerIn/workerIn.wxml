@@ -1,0 +1,116 @@
+<scroll-view class='wrapper' scroll-y wx:if="{{hasInfo==false}}">
+  <view class='contentBox'>
+    <view class='inputBox'>
+      <label class='label'>电话</label>
+      <input class='input' maxlength='11' placeholder="输入框" placeholder-class="inputP" bindinput='getPhone'/>
+    </view>
+    <view class='inputBox' bindtap='isShowWorkerTypeEvent'>
+      <label class='label'>选择工种</label>
+      <view class='select'>
+        <label class='inputP' wx:if="{{!index}}">选择工种</label>
+        <label wx:for='{{gz}}' wx:for-item="item" wx:for-index="index" wx:key="index"> {{item.name}}</label>
+        <!-- <image class='icon' src='../public/icon/arrow_down.png'></image> -->
+        <text class="iconfont {{selectedFlag?'icon-jiantou8':'icon-arrow_right'}} iconArrow"> </text>
+      </view>
+    </view>
+    <!-- {{isblockSelect?'blockBorder':''}} -->
+    <view class='workerType' wx:if="{{isShowWorkerTypeBox}}">
+      <label wx:for='{{gzArr}}' wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" data-index='{{index}}' bindtap='blockTap' class="workerTypeBlock {{gzArr[index].checked==true?'blockBorder':''}}">
+        {{item.name}}
+      </label>
+    </view>
+    <view class='inputBox'>
+      <label class='label'>工龄</label>
+      <input class='input' maxlength='2' placeholder="输入框" placeholder-class="inputP" bindinput='getAge'/>
+    </view>
+    <view class='indentityBox'>
+      <label class='indentityLabel'>身份证</label>
+      <view class='uploadIndentityBox'>
+        <view class='front'>
+          <view class='frontbackBox' bindtap="upload" style="background:url('{{img_1}}') no-repeat center center;background-size:100%">
+            <text wx:if="{{img_1==''}}" class="iconfont icon-jia indentityIcon"></text>
+          </view>
+          <text class='indentityText'>正</text>
+        </view>
+        <view class='center'>
+        </view>
+        <view class='back'>
+          <view class='frontbackBox' bindtap='upload2' style="background:url('{{img_2}}') no-repeat center center;background-size:100%">
+            <text wx:if="{{img_2==''}}" class="iconfont icon-jia indentityIcon"></text>
+          </view>
+          <text class='indentityText'>反</text>
+          <!-- <text class="iconfont icon-jia indentityIcon"></text> -->
+        </view>
+      </view>
+    </view>
+    <view class='inputBox'>
+      <label class='label'>现居住地址</label><input class='input' placeholder="输入框" placeholder-class="inputP" bindinput='getAddress'/>
+    </view>
+  </view>
+  <view class='contentBox'>
+    <view class='inputBoxTextarea' bindtap='getInsurance'>
+      <view class='label2'>
+          <text class="iconfont icon-ziyuan {{has_insurance?'checkedIcon':'unCheckedIcon'}}"></text>
+      </view>
+      <label class='text2'>购买施工安全保险（自由选择），免责声明</label>
+    </view>
+  </view>
+  <view class='contentBox2'>
+    <button type="primary" bindtap='publishEvent'> 发布 </button>
+  </view>
+</scroll-view>
+<scroll-view class='wrapper' scroll-y wx:if="{{hasInfo==true}}">
+  <view class='contentBox'>
+    <label class='inputBoxTextarea2'>{{task_status}}</label>
+  </view>
+  <view class='contentBox'>
+    <view class='inputBox'>
+      <label class='label'>电话</label>
+      <text>{{phone}}</text>
+      <!-- <input class='input' maxlength='11' placeholder="输入框" placeholder-class="inputP" bindinput='getPhone'/> -->
+    </view>
+    <view class='inputBox' bindtap='isShowWorkerTypeEvent'>
+      <label class='label'>工种</label>
+      <text>{{master_category}}</text>
+    </view>
+    <view class='inputBox'>
+      <label class='label'>工龄</label>
+      <text>{{work_age}}</text>
+    </view>
+    <view class='indentityBox'>
+      <label class='indentityLabel'>身份证</label>
+      <view class='uploadIndentityBox'>
+        <view class='front'>
+          <view class='frontbackBox' style="background:url('{{img_1}}') no-repeat center center;background-size:100%">
+            
+          </view>
+          <text class='indentityText'>正</text>
+        </view>
+        <view class='center'>
+        </view>
+        <view class='back'>
+          <view class='frontbackBox' style="background:url('{{img_2}}') no-repeat center center;background-size:100%">
+            
+          </view>
+          <text class='indentityText'>反</text>
+          <!-- <text class="iconfont icon-jia indentityIcon"></text> -->
+        </view>
+      </view>
+    </view>
+    <view class='inputBox'>
+      <label class='label'>现居住地址</label>
+      <text>{{address}}</text>
+    </view>
+  </view>
+  <view class='contentBox'>
+    <view class='inputBoxTextarea' bindtap='getInsurance'>
+      <view class='label2'>
+          <text class="iconfont icon-ziyuan {{has_insurance?'checkedIcon':'unCheckedIcon'}}"></text>
+      </view>
+      <label class='text2'>购买施工安全保险（自由选择），免责声明</label>
+    </view>
+  </view>
+</scroll-view>
+<nav currentMenu="{{currentMenu}}"></nav>
+<!-- <import src="../public/buttom.wxml" />
+<template is="foot" /> -->

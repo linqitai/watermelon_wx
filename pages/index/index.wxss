@@ -1,0 +1,102 @@
+
+swiper {
+  height: 400rpx;
+  width: 100%;
+}
+
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 广告 */
+
+.Advertisement {
+  width: 100%;
+  height: 250rpx;
+  margin-top: 20rpx;
+}
+
+.Advertisement image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 公司 */
+
+.company-box {
+  width: 100%;
+  margin-top: 20rpx;
+  /* margin-bottom: 120rpx; */
+}
+.margL{
+  margin-left: 3%;
+}
+.margR{
+  margin-right: 3%;
+}
+.company {
+  width: 45%;
+  height: 240rpx;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  /* margin: 20rpx; */
+  border-radius: 40rpx;
+  position: relative;
+}
+/* .company:after{
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: inherit;
+    border-radius: 40rpx;
+    filter: blur(0.5px);
+} */
+.img1{
+  background-image: url('https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/waterMelon%2F1.jpg');
+}
+.img2{
+  background-image: url('https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/waterMelon%2F2.jpg');
+}
+.img3{
+  background-image: url('https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/waterMelon%2F3.jpg');
+}
+.img4{
+  background-image: url('https://xywl-1256946438.cos.ap-chengdu.myqcloud.com/waterMelon%2F4.jpg');
+}
+
+.companyName {
+  position: absolute;
+  text-align: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-size: 35rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  z-index: 300;
+}
+.companyNametitle{
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-top: 50rpx;
+  z-index: 300;
+}
+.companyNameText{
+  font-size: 32rpx;
+  text-align: center;
+}
+.companyNameText2{
+  font-size: 32rpx;
+  height: 240rpx;
+  line-height: 240rpx;
+}
