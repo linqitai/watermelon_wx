@@ -18,7 +18,7 @@ Page({
     age:"",
     img_1: "",
     img_2: "",
-    has_insurance:1,
+    has_insurance:0,
     isShowWorkerTypeBox: false,
     selectedFlag: false,
     hasInfo: false,
@@ -332,7 +332,7 @@ Page({
         console.log(res)
       },
       function (res) {//完成
-        console.log(res)
+        // console.log(res)
       }
     )
   },

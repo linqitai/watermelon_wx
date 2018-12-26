@@ -21,28 +21,29 @@
   <navigator class='company img1 left margL' bindtap='onDevelope'>
     <view class='companyName'>
       <view class="companyNametitle">兼职</view>
-      <view class='companyNameText'>找到你喜欢的工作就是这么简单</view>
+      <view class='companyNameText'>找到你喜欢的工作</view>
     </view>
   </navigator>
-  <navigator class='company img2 right margR'  bindtap='onDevelope'>
+  <navigator class='company img3 right margR' url='../findWorker/findWorker'>
     <view class='companyName'>
-      <view class="companyNametitle">房屋出租</view>
-      <view class='companyNameText'>找到属于自己的小窝</view>
+      <view class="companyNametitle">找工人</view>
+      <view class='companyNameText'>找到合适的工人</view>
     </view>
   </navigator>
   <!-- 更多  -->
   <view class='clear'></view>
 </view>
 <view class='company-box'>
-  <navigator class='company img3 left margL' url='../findWorker/findWorker'>
-    <view class='companyName'>
-      <view class='companyNameText2'>更多功能正在开发</view>
-    </view>
-  </navigator>
   <navigator class='company img4 right margR' bindtap='onDevelope'>
     <view class='companyName'>
       <view class="companyNametitle">商城</view>
       <view class='companyNameText'>在这里，你可以随心所欲</view>
+    </view>
+  </navigator>
+  <navigator class='company img2 right margR'  bindtap='onDevelope'>
+    <view class='companyName'>
+      <view class="companyNametitle">房屋出租</view>
+      <view class='companyNameText'>找到属于自己的小窝</view>
     </view>
   </navigator>
   <view class='clear'></view>

@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "西瓜帮你找",
   "navigationBarBackgroundColor": "#048176",
   "navigationBarTextStyle": "#ffffff",
   "usingComponents": {

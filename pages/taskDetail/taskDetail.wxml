@@ -8,8 +8,11 @@
           <label class="taskTitle">{{title}}</label>
         </view>
         <view class='lineCenter'></view>
-        <view class='line2' style='margin-top:6rpx;'>
-          <label class="line2text" style='line-height:64rpx' bindlongtap='copyText' data-text='{{phone}}'  hover-class="weui-cell_active" data-reply-phone="{{phone}}" bindtap="phoneCall">{{phone}}</label>
+        <view class='line2' style='margin-top:6rpx;' data-text='{{phone}}'  hover-class="weui-cell_active" data-reply-phone="{{phone}}" bindtap="phoneCall">
+          <label class="line2text" style='line-height:64rpx'>
+            {{phone}} 
+          </label>
+          <text class="iconfont icon-dianhua phoneIconStyle"></text>
         </view>
         <view class='line3'>
           <label class="line2text">
@@ -30,27 +33,27 @@
     </view> -->
     <view class="li" data-index="1">
       <view class="litext">订单号：</view>
-      <view class="value" bindtap='setOrderNo' bindlongtap='setOrderNo'>{{order_no}}</view>
+      <view class="value ellipsis" bindtap='setOrderNo' bindlongtap='setOrderNo'>{{order_no}}</view>
     </view>
     <view class="li" data-index="1">
       <view class="litext">工种：</view>
-      <view class="value">{{gz}}</view>
+      <view class="value ellipsis">{{gz}}</view>
     </view>
     <view class="li" data-index="1" wx:if="{{remark}}">
       <view class="litext">工种补充：</view>
-      <view class="value">{{remark}}</view>
+      <view class="value ellipsis">{{remark}}</view>
     </view>
     <view class="li" data-index="2">
       <view class="litext">地址：</view>
-      <view class="value">{{address}}</view>
+      <view class="value ellipsis">{{address}}</view>
     </view>
     <view class="li" data-index="3">
       <view class="litext">预约时间：</view>
       <view class="value">{{appointment_time}}</view>
     </view>
-    <view class="li" data-index="4">
-      <view class="litext">详情描述：</view>
-      <view class="value">{{content}}</view>
+    <view class="detail">
+      <view>详情描述：</view>
+      <view>{{content}}</view>
     </view>
   </view>
   <view class='contentBox3' wx:if="{{comment!=null}}">
@@ -79,9 +82,9 @@
           <label class="line1text">{{master.user.nickName}}</label>
         </view>
         <view class='lineCenter'></view>
-        <view class='line2'>
-          <label class="line1text line2text" style='line-height:64rpx' bindlongtap='copyText' data-text='{{phone}}'  hover-class="weui-cell_active" data-reply-phone="{{phone}}" bindtap="phoneCall">{{master.phone}}</label>
-          <!-- <label class="line1text line2text">{{master.phone}}</label> -->
+        <view class='line2' data-text='{{phone}}'  hover-class="weui-cell_active" data-reply-phone="{{phone}}" bindtap="phoneCall">
+          <label class="line1text line2text" style='line-height:64rpx'>{{master.phone}} </label>
+          <text class="iconfont icon-dianhua phoneIconStyle"></text>
         </view>
       </view>
     </view>

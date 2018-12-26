@@ -100,10 +100,15 @@ Page({
           for (var i = 0; i < gz.length;i++){
             gzattr.push(gz[i].name)
           }
+          var nickName = result.data.nickName;
+          for(var i=0;i<nickName.length;i++) {
+            nickName = nickName.replace("?", "")
+            nickName = nickName.replace("？", "")
+          }
           that.setData({
             avatarUrl: result.data.avatarUrl,
             category: gzattr.join('、'),
-            nickName: result.data.nickName,
+            nickName: nickName,
             phone: result.data.phone,
             age: result.data.work_age||"",
           })

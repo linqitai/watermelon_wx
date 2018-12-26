@@ -35,6 +35,11 @@
   left: 0rpx;
   right: 12rpx;
 }
+.ellipsis{
+  overflow: hidden;  /*溢出隐藏*/
+  text-overflow: ellipsis; /*以省略号...显示*/
+  white-space: nowrap;  /*强制不换行*/
+}
 /* 清除浮动 */
 .clear {
   clear: both;

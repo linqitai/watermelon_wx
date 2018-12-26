@@ -11,11 +11,5 @@
     "pages/myQuestionBack/myQuestionBack",
     "pages/question/question",
     "pages/public/buttom"
-  ],
-  "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "兼职平台",
-    "navigationBarTextStyle": "black"
-  }
+  ]
 }

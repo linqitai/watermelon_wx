@@ -30,7 +30,7 @@ Page({
     wx.showModal({
       title: '提示',
       showCancel: false,
-      content: "敬情期待",
+      content: "正在内测中",
       success(res) {
         console.log(res)
         if (res.confirm) {

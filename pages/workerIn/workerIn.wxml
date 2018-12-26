@@ -56,7 +56,7 @@
     </view>
   </view>
   <view class='contentBox2'>
-    <button type="primary" bindtap='publishEvent'> 发布 </button>
+    <button type="primary" bindtap='publishEvent'> 提交 </button>
   </view>
 </scroll-view>
 <scroll-view class='wrapper' scroll-y wx:if="{{hasInfo==true}}">
@@ -75,7 +75,7 @@
     </view>
     <view class='inputBox'>
       <label class='label'>工龄</label>
-      <text>{{work_age}}</text>
+      <text>{{work_age}}年</text>
     </view>
     <view class='indentityBox'>
       <label class='indentityLabel'>身份证</label>
@@ -103,11 +103,11 @@
     </view>
   </view>
   <view class='contentBox'>
-    <view class='inputBoxTextarea' bindtap='getInsurance'>
+    <view class='inputBoxTextarea'>
       <view class='label2'>
           <text class="iconfont icon-ziyuan {{has_insurance?'checkedIcon':'unCheckedIcon'}}"></text>
       </view>
-      <label class='text2'>购买施工安全保险（自由选择），免责声明</label>
+      <label class='text2'>已购买施工安全保险</label>
     </view>
   </view>
 </scroll-view>

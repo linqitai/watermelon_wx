@@ -24,7 +24,7 @@ Page({
     phone:'',
     address:'',
     contents:'',
-    has_insurance:1,
+    has_insurance:0,
     appointment_time:'',
     date: '',
     time: '',
