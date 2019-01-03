@@ -79,6 +79,11 @@
 					"name": "问题反馈",
 					"pathName": "pages/myQuestionBack/myQuestionBack"
 				},
+        {
+          "id": -1,
+          "name": "汇报施工情况",
+          "pathName": "pages/reportTask/reportTask"
+        },
 				{
 					"id": -1,
 					"name": "常见问题",

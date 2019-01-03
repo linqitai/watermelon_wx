@@ -34,7 +34,7 @@ Page({
   onLoad: function(options) {
     wx.setStorageSync('lastPage', this.data.currentPage)
     this.setData({
-      currentData: wx.getStorageSync("_currentData")
+      currentData: 0
     })
     this.getListByCurrent(this.data.currentData)
   },
@@ -213,6 +213,7 @@ Page({
           wx.showModal({
             title: '提示',
             content: result.data,
+            showCancel: false,
             success(res) {
               console.log(res)
               if (res.confirm) {

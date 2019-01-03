@@ -1,5 +1,8 @@
 <scroll-view class='wrapper' scroll-y wx:if="{{hasInfo==false}}">
   <view class='contentBox'>
+    <label class='inputBoxTextarea2'>{{task_status}}</label>
+  </view>
+  <view class='contentBox'>
     <view class='inputBox'>
       <label class='label'>电话</label>
       <input class='input' maxlength='11' placeholder="输入框" placeholder-class="inputP" bindinput='getPhone'/>
@@ -20,11 +23,11 @@
       </label>
     </view>
     <view class='inputBox'>
-      <label class='label'>工龄</label>
+      <label class='label'>团队人数</label>
       <input class='input' maxlength='2' placeholder="输入框" placeholder-class="inputP" bindinput='getAge'/>
     </view>
     <view class='indentityBox'>
-      <label class='indentityLabel'>身份证</label>
+      <label class='indentityLabel'>身份证（非必填）</label>
       <view class='uploadIndentityBox'>
         <view class='front'>
           <view class='frontbackBox' bindtap="upload" style="background:url('{{img_1}}') no-repeat center center;background-size:100%">
@@ -59,6 +62,7 @@
     <button type="primary" bindtap='publishEvent'> 提交 </button>
   </view>
 </scroll-view>
+
 <scroll-view class='wrapper' scroll-y wx:if="{{hasInfo==true}}">
   <view class='contentBox'>
     <label class='inputBoxTextarea2'>{{task_status}}</label>
@@ -74,10 +78,10 @@
       <text>{{master_category}}</text>
     </view>
     <view class='inputBox'>
-      <label class='label'>工龄</label>
-      <text>{{work_age}}年</text>
+      <label class='label'>团队人数</label>
+      <text>{{work_age}}人</text>
     </view>
-    <view class='indentityBox'>
+    <view class='indentityBox' wx:if="{{img_1}}">
       <label class='indentityLabel'>身份证</label>
       <view class='uploadIndentityBox'>
         <view class='front'>

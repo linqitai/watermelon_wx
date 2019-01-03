@@ -15,70 +15,138 @@
       </view>
     </view>
 </view>
+
 <view class='contentBox2'>
   <view class='title2'>资料信息</view>
+  <view class="li" bindtap='toReportTask'>
+    
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-huibao leftIcon"> </text>
+      </view>
+      汇报施工情况
+    </view>
+    <view class="right">
+      <text class="iconfont icon-arrow_right iconClass2"> </text>
+    </view>
+  </view>
   <view class="li" bindtap='toWorkerIn'>
-    <view class="left">师傅入住</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-getin leftIcon"> </text>
+      </view>
+      师傅入住
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='toQuestion'>
-    <view class="left">常见问题</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-wenti leftIcon"> </text>
+      </view>
+      常见问题
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='toQuestionBack'>
-    <view class="left">问题反馈</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-fankui leftIcon"> </text>
+      </view>
+      问题反馈
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='buyInsurance'>
-    <view class="left">购买施工保险</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-baoxian leftIcon"> </text>
+      </view>
+      购买施工保险
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">商家合作</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-shangjiahezuo leftIcon"> </text>
+      </view>
+      商家合作
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">广告位合作</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-guanggaowei leftIcon"> </text>
+      </view>
+      广告位合作
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">商城入驻</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-huibao leftIcon"> </text>
+      </view>
+      商城入驻
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">我的团队</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-tuandui leftIcon"> </text>
+      </view>
+      我的团队
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">我的钱包</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-qianbao leftIcon"> </text>
+      </view>
+      我的钱包
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">城市加盟</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-chengshi leftIcon"> </text>
+      </view>
+      城市加盟
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>
   </view>
   <view class="li" bindtap='merchantQuestion'>
-    <view class="left">我要推广</view>
+    <view class="left">
+      <view class="iconLeft">
+        <text class="iconfont icon-tuiguang leftIcon"> </text>
+      </view>
+      我要推广
+    </view>
     <view class="right">
       <text class="iconfont icon-arrow_right iconClass2"> </text>
     </view>

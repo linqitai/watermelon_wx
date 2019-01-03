@@ -1,3 +1,10 @@
+.iconLeft{
+  float: left;
+  width: 50rpx;
+}
+.leftIcon{
+  font-size: 46rpx;
+}
 .contentBox{
   padding: 30rpx 40rpx;
   background-color: white;

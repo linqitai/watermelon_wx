@@ -9,6 +9,7 @@
     "pages/workerIn/workerIn",
     "pages/personInfo/personInfo",
     "pages/myQuestionBack/myQuestionBack",
+    "pages/reportTask/reportTask",
     "pages/question/question",
     "pages/public/buttom"
   ]

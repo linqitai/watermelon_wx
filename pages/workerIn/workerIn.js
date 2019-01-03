@@ -181,23 +181,29 @@ Page({
             has_insurance: has_insurance
           })
           console.log(that.data, "data")
+        } else if (result.code == 403) {
+          that.setData({
+            hasInfo: false,
+            task_status: result.data
+          })
+          console.log(that.data.hasInfo,"hasInfo")
+          
+          // wx.showModal({
+          //   title: '提示',
+          //   content: result.data,
+          //   showCancel: false,
+          //   success(res) {
+          //     console.log(res)
+          //     if (res.confirm) {
+          //       console.log(res.confirm, "res.confirm")
+          //     } else if (res.cancel) {
+          //       console.log('用户点击取消')
+          //     }
+          //   }
+          // })
         } else if (result.code == 400) {
           that.setData({
             hasInfo: false
-          })
-          console.log(that.data.hasInfo,"hasInfo")
-          wx.showModal({
-            title: '提示',
-            content: result.data,
-            showCancel: false,
-            success(res) {
-              console.log(res)
-              if (res.confirm) {
-                console.log(res.confirm, "res.confirm")
-              } else if (res.cancel) {
-                console.log('用户点击取消')
-              }
-            }
           })
         }
       },
@@ -307,8 +313,8 @@ Page({
             icon: 'success',
             duration: 2000
           })
-          wx.redirectTo({
-            url: '/pages/index-Order/index-Order'
+          wx.reLaunch({
+            url: '/pages/workerIn/workerIn'
           })
         } else if (result.code == 400){
           wx.showModal({
@@ -318,7 +324,7 @@ Page({
             success(res) {
               if (res.confirm) {
                 console.log('用户点击确定')
-                wx.switchTab({
+                wx.navigateTo({
                   url: '/pages/index-Order/index-Order'
                 })
               } else if (res.cancel) {

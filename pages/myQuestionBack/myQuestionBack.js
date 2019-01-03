@@ -24,6 +24,23 @@ Page({
   onLoad: function(options) {
     wx.setStorageSync('lastPage', this.data.currentPage);
   },
+  getContent: function (e) {
+    var value = e.detail.value;
+    var len = value.length;
+    console.log(e.detail.value)
+    console.log(len)
+    if (len >= 200) {
+      wx.showToast({
+        title: '内容超出限制',
+        icon: 'warn',
+        duration: 2000
+      })
+    } else {
+      this.setData({
+        content: value
+      })
+    }
+  },
   submit:function() {
     var that = this;
     var params = {

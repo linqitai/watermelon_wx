@@ -1,16 +1,64 @@
+/* 兼职平台，图标库在iconfont上，重辰管理联系QQ：1060956604（重辰） */
+
 @font-face {
   font-family: 'iconfont';  /* project id 930818 */
-  src: url('//at.alicdn.com/t/font_930818_u0iz2xockn.eot');
-  src: url('//at.alicdn.com/t/font_930818_u0iz2xockn.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_930818_u0iz2xockn.woff') format('woff'),
-  url('//at.alicdn.com/t/font_930818_u0iz2xockn.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_930818_u0iz2xockn.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_930818_obk9hqqm1p.eot');
+  src: url('//at.alicdn.com/t/font_930818_obk9hqqm1p.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_930818_obk9hqqm1p.woff') format('woff'),
+  url('//at.alicdn.com/t/font_930818_obk9hqqm1p.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_930818_obk9hqqm1p.svg#iconfont') format('svg');
 }
+
 .iconfont {
   font-family: "iconfont" !important;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-tuiguang:before {
+  content: "\e60c";
+}
+
+.icon-chengshi:before {
+  content: "\ec70";
+}
+
+.icon-qianbao:before {
+  content: "\e625";
+}
+
+.icon-tuandui:before {
+  content: "\e654";
+}
+
+.icon-guanggaowei:before {
+  content: "\e663";
+}
+
+.icon-shangjiahezuo:before {
+  content: "\e617";
+}
+
+.icon-baoxian:before {
+  content: "\e63f";
+}
+
+.icon-fankui:before {
+  content: "\e613";
+}
+
+.icon-wenti:before {
+  content: "\ec2e";
+}
+
+.icon-huibao:before {
+  content: "\e61b";
+}
+
+.icon-yipiankongbaidedouding:before {
+  content: "\e733";
 }
 
 .icon-twoArrow:before {

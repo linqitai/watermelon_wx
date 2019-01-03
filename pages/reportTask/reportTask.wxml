@@ -1,0 +1,22 @@
+<scroll-view class='thisPage' scroll-y>
+  <picker bindchange="bindPickerWorkChange" value="{{indexWork}}" range="{{arrayTask}}">
+    <view class="picker">
+      <view class="li">
+        <view class="left">所接单子：{{arrayTask[indexWork].title}}</view>
+        <view class="right" wx:if="{{arrayTask.length>1}}">
+          <text class="iconfont icon-arrow_right iconClass2"> </text>
+        </view>
+      </view>
+    </view>
+  </picker>
+  <view class='li2'>
+    <text class='label'>汇报施工情况</text>
+    <textarea class="textarea" value="{{content}}" 
+      placeholder="请输入内容..." placeholder-class="placeholder"
+      maxlength="{{maxlength}}" focus="{{focus}}"
+      show-confirm-bar="{{showConfirmBar}}" bindinput='getContent'>
+    </textarea>
+  </view>
+  <button class='submit' bindtap="submit">提交</button>
+  <!-- <view class='Submission' bindtap='submit'>提交反馈</view> -->
+</scroll-view>

@@ -13,6 +13,9 @@
       <view class='Order-box'>
         <view class='topLine'></view>
         <!-- 单子 -->
+        <view class='nullView' wx:if="{{list1.length<1}}">
+          暂无单子
+        </view>
         <view class='Order' wx:for="{{list1}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-tab='0' data-avatar='{{item.master_avatarUrl}}' bindtap='toDetail'>
           <image class='order-img' src="{{item.master_avatarUrl}}" lazy-load="true"></image>
           <view class='order-text'>
@@ -46,7 +49,10 @@
     <scroll-view class='scrollView' scroll-y lower-threshold="50" bindscrolltolower="scrollToBottom2">
       <view class='Order-box'>
         <view class='topLine'></view>
-        <!-- 单子 -->              
+        <!-- 单子 -->     
+        <view class='nullView' wx:if="{{list2.length<1}}">
+          暂无单子
+        </view>         
         <view class='Order' wx:for="{{list2}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-tab='1' data-avatar='{{item.master_avatarUrl}}' bindtap='toDetail'>
           <image class='order-img' src="{{item.master_avatarUrl}}" lazy-load="true"></image>
           <view class='order-text'>
@@ -80,13 +86,16 @@
     <scroll-view class='scrollView' scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
       <view class='Order-box' >
         <view class='topLine'></view>
-          <!-- 单子 -->              
+          <!-- 单子 -->
+          <view class='nullView' wx:if="{{list3.length<1}}">
+            暂无单子
+          </view>
           <view class='Order' wx:for="{{list3}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-id="{{item.id}}" data-tab='2' data-avatar='{{item.master_avatarUrl}}' bindtap='toDetail'>
             <image class='order-img' src="{{item.master_avatarUrl}}" lazy-load="true"></image>
             <view class='order-text'>
               <view class='line1'>标题：{{item.title}}</view>
               <view class='line2'>
-                预约时间：{{item.appointment_time}} <button class='reportBtn' data-id='{{item.id}}' catchtap='reportEvent'>汇报施工情况</button>
+                预约时间：{{item.appointment_time}} <label class='reportBtn' data-id='{{item.id}}' catchtap='reportEvent'>汇报施工情况</label>
               </view>
               <view class='line3'>
                 <view class='line3Box'>

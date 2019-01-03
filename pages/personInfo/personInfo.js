@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    indexWork: 0,
     index: '',
     currentMenu: [false, false, false, false, true],
     currentData: 0,
@@ -73,6 +74,11 @@ Page({
   noFunc: function() {
     
   },
+  toReportTask: function() {
+    wx.navigateTo({
+      url: '/pages/reportTask/reportTask',
+    })
+  },
   toQuestionBack: function(){
     console.log("click")
     wx.navigateTo({
@@ -104,6 +110,7 @@ Page({
           for(var i=0;i<nickName.length;i++) {
             nickName = nickName.replace("?", "")
             nickName = nickName.replace("？", "")
+            nickName = nickName.replace("", "")
           }
           that.setData({
             avatarUrl: result.data.avatarUrl,
@@ -160,6 +167,12 @@ Page({
     this.setData({
       maskIsShow: true,
       dialogSureIsShow: true
+    })
+  },
+  bindPickerWorkChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      indexWork: e.detail.value
     })
   },
   bindPickerChange: function (e) {
